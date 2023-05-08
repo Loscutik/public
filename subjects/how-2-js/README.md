@@ -26,17 +26,21 @@ $ echo '<script type="module" src="how-2-js.js"></script>' > index.html
 ```
 
 Let's create a simple web server:
+- Linux:
 ```sh
-$ &>/dev/null python3 -m http.server &
+$ &>/dev/null python3 -m http.server -b localhost 3000 &
 ```
-
+- Windows:
+``` powershell
+python3 -m http.server -b localhost 3000 > null 2>&1
+```
 Now open your browser at the specified port. You'll use an appropriate command for your system:
 
 - Linux: `xdg-open`
 - macOS: `open`
 - Windows: `start`
 ```sh
-xdg-open 'http://localhost:8000'
+xdg-open 'http://localhost:3000'
 ```
 
 
